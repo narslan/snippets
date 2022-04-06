@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: trace
+# key: trace
+# --
+(import trace)
+
+
+(trace f)
+(parameterize ((trace-call-sites #t)
+               (trace-call-site-length-limit 20))
+  (assert  (f param)))
